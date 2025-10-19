@@ -1,0 +1,14 @@
+theme=tokyonight_night
+
+window-title-font-family="MonoLisa Variable"
+
+font-family="MonoLisa Variable"
+font-size=14
+gtk-titlebar=false
+
+window-decoration = false
+# command=/home/a/.config/ghostty/ghostty-tmux.sh
+command = /usr/bin/tmux
+keybind=ctrl+shift+w=close_window
+confirm-close-surface=false
+copy-on-select = clipboard 
