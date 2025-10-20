@@ -8,5 +8,5 @@ Dotfiles
 To use just copy config files
 
 ```
-cp -Rf ./.* ./
+rsync -av --exclude '.git' ./ ~
 ```
