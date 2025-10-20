@@ -1,0 +1,16 @@
+-- return {
+--   {
+--     "neovim/nvim-lspconfig",
+--     opts = {
+--       servers = {
+--         phpactor = {
+--           cmd = { "phpactor", "language-server" },
+--           filetypes = { "php" },
+--           root_dir = function(fname)
+--             return require("lspconfig.util").root_pattern("composer.json", ".git")(fname) or vim.fn.getcwd()
+--           end,
+--         },
+--       },
+--     },
+--   },
+-- }

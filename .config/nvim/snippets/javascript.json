@@ -1,0 +1,52 @@
+{
+  "Console log": {
+    "prefix": "cl",
+    "body": ["console.log($1);"],
+    "description": "Console log"
+  },
+  "Function": {
+    "prefix": "fn",
+    "body": ["function ${1:name}(${2:params}) {", "  $0", "}"],
+    "description": "Function declaration"
+  },
+  "Arrow Function": {
+    "prefix": "afn",
+    "body": ["const ${1:name} = (${2:params}) => {", "  $0", "}"],
+    "description": "Arrow function"
+  },
+  "Import": {
+    "prefix": "imp",
+    "body": ["import ${1:module} from '${2:package}';"],
+    "description": "Import module"
+  },
+  "Export Default": {
+    "prefix": "exp",
+    "body": ["export default ${1:name};"],
+    "description": "Export default"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for (let ${1:i} = 0; ${1:i} < ${2:array}.length; ${1:i}++) {",
+      "  $0",
+      "}"
+    ],
+    "description": "For loop"
+  },
+  "For..of Loop": {
+    "prefix": "forof",
+    "body": ["for (const ${1:item} of ${2:array}) {", "  $0", "}"],
+    "description": "For..of loop"
+  },
+  "Try Catch": {
+    "prefix": "tc",
+    "body": [
+      "try {",
+      "  $0",
+      "} catch (${1:error}) {",
+      "  console.error(${1:error});",
+      "}"
+    ],
+    "description": "Try / Catch"
+  }
+}

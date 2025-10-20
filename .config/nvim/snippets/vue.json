@@ -1,0 +1,56 @@
+{
+  "Console log": {
+    "prefix": "cl",
+    "body": ["console.log($1);"],
+    "description": "Console log"
+  },
+  "Script Setup": {
+    "prefix": "ssu",
+    "body": ["<script setup>", "$0", "</script>"],
+    "description": "Vue <script setup> block"
+  },
+  "Template": {
+    "prefix": "tmpl",
+    "body": ["<template>", "  <div>", "    $0", "  </div>", "</template>"],
+    "description": "Vue template block"
+  },
+  "Style Scoped": {
+    "prefix": "style",
+    "body": ["<style scoped>", "$0", "</style>"],
+    "description": "Vue scoped style block"
+  },
+  "Component Export": {
+    "prefix": "exp",
+    "body": [
+      "export default {",
+      "  name: '${1:ComponentName}',",
+      "  props: {},",
+      "  setup() {",
+      "    $0",
+      "    return {};",
+      "  }",
+      "}"
+    ],
+    "description": "Vue component export"
+  },
+  "Emit Event": {
+    "prefix": "emit",
+    "body": [
+      "const emit = defineEmits(['${1:event}']);",
+      "emit('${1:event}', $0);"
+    ],
+    "description": "Vue emit event"
+  },
+  "Prop": {
+    "prefix": "prop",
+    "body": [
+      "defineProps({",
+      "  ${1:propName}: {",
+      "    type: ${2:String},",
+      "    required: ${3:false},",
+      "  },",
+      "});"
+    ],
+    "description": "Vue defineProps"
+  }
+}

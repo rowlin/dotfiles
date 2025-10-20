@@ -1,0 +1,85 @@
+{
+  "Echo Var": {
+    "prefix": "ec",
+    "body": ["echo ${1:$var};"],
+    "description": "Echo variable"
+  },
+  "Dump and Die": {
+    "prefix": "dd",
+    "body": ["dd(${1:$var});"],
+    "description": "Laravel dd()"
+  },
+  "Var Dump": {
+    "prefix": "vd",
+    "body": ["var_dump(${1:$var});"],
+    "description": "PHP var_dump"
+  },
+  "Blade Echo": {
+    "prefix": "be",
+    "body": ["{{ ${1:$var} }}"],
+    "description": "Blade echo {{ }}"
+  },
+  "Blade Echo Escaped": {
+    "prefix": "bee",
+    "body": ["{!! ${1:$var} !!}"],
+    "description": "Blade echo escaped {!! !!}"
+  },
+  "Blade If": {
+    "prefix": "bif",
+    "body": ["@if(${1:condition})", "    $0", "@endif"],
+    "description": "Blade if"
+  },
+  "Blade Foreach": {
+    "prefix": "bfe",
+    "body": ["@foreach(${1:$items} as ${2:$item})", "    $0", "@endforeach"],
+    "description": "Blade foreach"
+  },
+  "Blade For": {
+    "prefix": "bfor",
+    "body": [
+      "@for(${1:$i} = 0; ${1:$i} < ${2:$count}; ${1:$i}++)",
+      "    $0",
+      "@endfor"
+    ],
+    "description": "Blade for loop"
+  },
+  "Route Get": {
+    "prefix": "rget",
+    "body": ["Route::get('${1:/}', [${2:Controller}::class, '${3:method}']);"],
+    "description": "Laravel Route::get"
+  },
+  "Route Post": {
+    "prefix": "rpost",
+    "body": ["Route::post('${1:/}', [${2:Controller}::class, '${3:method}']);"],
+    "description": "Laravel Route::post"
+  },
+  "Controller Method": {
+    "prefix": "cmet",
+    "body": [
+      "public function ${1:index}(${2:Request $request})",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Laravel controller method"
+  },
+  "Migration up/down": {
+    "prefix": "mig",
+    "body": [
+      "public function up()",
+      "{",
+      "    Schema::create('${1:table}', function (Blueprint $table) {",
+      "        $table->id();",
+      "        $table->string('${2:column}');",
+      "        $table->timestamps();",
+      "    });",
+      "}",
+      "",
+      "public function down()",
+      "{",
+      "    Schema::dropIfExists('${1:table}');",
+      "}"
+    ],
+    "description": "Laravel migration up/down"
+  }
+}
